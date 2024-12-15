@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <header>
-      <VImg class="header-img" src="https://www.godigit.com/content/dam/godigit/directportal/en/egypt-emblem.jpg"
-        height="50" />
+      <VImg class="header-img" src="./public/eagle.png"
+      height="50" />
       <div class="header-title"> {{ $t('title') }}</div>
 
       <div class="header-translate">
@@ -16,6 +16,7 @@
     <div class="main-content">
       <nav>
         <div class="list">
+    
           <div @click="showHome()" class="list-item">
             {{ $t('homePage') }}
           </div>
@@ -117,9 +118,8 @@ header {
 .header-img {
   flex: 1;
   max-width: 52px;
-  background: white;
-  border-radius: 50%;
   padding: 10px;
+  margin:auto;
 }
 
 .header-title {
