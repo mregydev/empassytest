@@ -1,14 +1,15 @@
 <template>
   <div class="container">
     <header>
-      <VImg class="header-img" src="https://egyptian-embassy.de/images/logo.png" height="50" />
+      <VImg class="header-img" src="https://www.godigit.com/content/dam/godigit/directportal/en/egypt-emblem.jpg"
+        height="50" />
       <div class="header-title"> {{ $t('title') }}</div>
 
       <div class="header-translate">
         <VImg class="translate-img" @click="changeLanguage('de')"
-          src="https://egyptian-embassy.de/media/mod_languages/images/de.gif" />
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBA2MjoH6BDah2SAQg_idWv9XLBhcK1qZa1w&s" />
         <VImg class="translate-img" @click="changeLanguage('en')"
-          src="https://egyptian-embassy.de/media/mod_languages/images/en.gif" />
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN6NjUzMsxiPYELyWrKg17MA4eLo47fkkM2w&s" />
       </div>
     </header>
 
@@ -28,8 +29,12 @@
       </nav>
       <div v-if="isHomePage" class="viewer">
         <VCarousel cycle interval="5000" hide-delimiters height="200">
-          <VCarouselItem src="https://egyptian-embassy.de/images/banners/banner.jpg"></VCarouselItem>
-          <VCarouselItem src="https://egyptian-embassy.de/images/banners/banner1.jpg"></VCarouselItem>
+          <VCarouselItem
+            src="https://www.freewebheaders.com/wp-content/gallery/great-pyramid-of-giza/the-great-pyramid-of-giza-egypt-website-header.jpg">
+          </VCarouselItem>
+          <VCarouselItem
+            src="https://www.freewebheaders.com/wp-content/gallery/great-pyramid-of-giza/cache/pyramids-of-giza-egypt-website-header.jpg-nggid043062-ngg0dyn-1280x375x100-00f0w010c010r110f110r010t010.jpg">
+          </VCarouselItem>
         </VCarousel>
         <VAlert class="alert" type="warning" closable>
           {{ $t('notification') }}
@@ -112,6 +117,9 @@ header {
 .header-img {
   flex: 1;
   max-width: 52px;
+  background: white;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 .header-title {
@@ -139,7 +147,7 @@ header {
 }
 
 nav {
-  
+
   padding: 10px;
   height: 100vh;
   background-color: #000000;
@@ -165,7 +173,7 @@ nav {
 .viewer {
   flex: 10;
   padding: 20px;
-  
+
 }
 
 .description {
